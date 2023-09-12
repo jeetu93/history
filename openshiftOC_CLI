@@ -1,0 +1,778 @@
+student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ git config --global user.email "k.jitendra345@yahoo.com"
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ git config --global user.email
+k.jitendra345@yahoo.com
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ git config --global user.name
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ git checkout -b docker-build
+fatal: A branch named 'docker-build' already exists.
+[student@workstation DO288-apps]$ git branch
+  docker-build
+* main
+[student@workstation DO288-apps]$ git push -u origin docker-build
+Username for 'https://github.com': k.jitendra345@yahoo.com
+Password for 'https://k.jitendra345@yahoo.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/jeetu93/DO288-apps.git/'
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ git push -u origin docker-build
+Username for 'https://github.com': k.jitendra345@yahoo.com
+Password for 'https://k.jitendra345@yahoo.com@github.com': 
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'docker-build' on GitHub by visiting:
+remote:      https://github.com/jeetu93/DO288-apps/pull/new/docker-build
+remote: 
+To https://github.com/jeetu93/DO288-apps.git
+ * [new branch]      docker-build -> docker-build
+Branch 'docker-build' set up to track remote branch 'docker-build' from 'origin'.
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ clear
+
+[student@workstation DO288-apps]$ ls -ltrh
+total 16K
+-rw-rw-r--. 1 student student 205 Sep 11 06:04 README.md
+-rw-rw-r--. 1 student student 12K Sep 11 06:04 LICENSE
+drwxrwxr-x. 2 student student  57 Sep 11 06:04 app-config
+drwxrwxr-x. 8 student student 146 Sep 11 06:04 apps
+drwxrwxr-x. 2 student student  40 Sep 11 06:04 build-app
+drwxrwxr-x. 9 student student 196 Sep 11 06:04 books
+drwxrwxr-x. 4 student student  35 Sep 11 06:04 builds-applications
+drwxrwxr-x. 3 student student  18 Sep 11 06:04 deployments-applications
+drwxrwxr-x. 3 student student  38 Sep 11 06:04 container-build
+drwxrwxr-x. 3 student student  18 Sep 11 06:04 builds-triggers
+drwxrwxr-x. 4 student student  35 Sep 11 06:04 builds-review
+drwxrwxr-x. 3 student student  18 Sep 11 06:04 deployments-review
+drwxrwxr-x. 2 student student  24 Sep 11 06:04 html-helloworld
+drwxrwxr-x. 2 student student  63 Sep 11 06:04 hello-world-nginx
+drwxrwxr-x. 3 student student  60 Sep 11 06:04 hello-java
+drwxrwxr-x. 2 student student  20 Sep 11 06:04 go-hello
+drwxrwxr-x. 4 student student  35 Sep 11 06:04 deployments-strategy
+drwxrwxr-x. 5 student student  83 Sep 11 06:04 kubefiles
+drwxrwxr-x. 3 student student  32 Sep 11 06:04 java-serverhost
+drwxrwxr-x. 4 student student  35 Sep 11 06:04 images-ubi
+drwxrwxr-x. 3 student student  71 Sep 11 06:04 micro-java
+drwxrwxr-x. 8 student student 161 Sep 11 06:04 labs
+drwxrwxr-x. 3 student student  71 Sep 11 06:04 movies
+drwxrwxr-x. 2 student student  23 Sep 11 06:04 php-helloworld
+drwxrwxr-x. 2 student student  41 Sep 11 06:04 php-hello-dockerfile
+drwxrwxr-x. 2 student student  40 Sep 11 06:04 nodejs-helloworld
+drwxrwxr-x. 2 student student  62 Sep 11 06:04 nexus3
+drwxrwxr-x. 4 student student  35 Sep 11 06:04 multicontainer-helm
+drwxrwxr-x. 2 student student  25 Sep 11 06:04 simple-pipeline
+drwxrwxr-x. 3 student student  36 Sep 11 06:04 s2i-scripts
+drwxrwxr-x. 2 student student  38 Sep 11 06:04 quotes
+drwxrwxr-x. 3 student student  32 Sep 11 06:04 quip
+drwxrwxr-x. 2 student student  40 Sep 11 06:04 probes
+drwxrwxr-x. 2 student student  23 Sep 11 06:04 post-commit
+drwxrwxr-x. 2 student student  23 Sep 11 06:04 php-scale
+drwxrwxr-x. 3 student student  32 Sep 11 06:04 todo-api-micro
+drwxrwxr-x. 6 student student 109 Sep 11 06:04 solutions
+drwxrwxr-x. 3 student student  88 Sep 11 06:04 todo-api
+drwxrwxr-x. 3 student student 164 Sep 11 06:04 todo-backend
+drwxrwxr-x. 4 student student 195 Sep 11 06:04 todo-frontend
+drwxrwxr-x. 5 student student  85 Sep 11 06:04 todo-single
+drwxrwxr-x. 2 student student  24 Sep 11 06:04 ubi-sleep
+drwxrwxr-x. 2 student student  39 Sep 11 06:04 ubi-info
+drwxrwxr-x. 2 student student  24 Sep 11 06:04 ubi-echo
+drwxrwxr-x. 2 student student  23 Sep 11 06:04 trigger-builds
+drwxrwxr-x. 3 student student 115 Sep 11 06:04 todo-ssr
+[student@workstation DO288-apps]$ ls
+app-config                deployments-strategy  micro-java            quip             todo-single
+apps                      go-hello              movies                quotes           todo-ssr
+books                     hello-java            multicontainer-helm   README.md        trigger-builds
+build-app                 hello-world-nginx     nexus3                s2i-scripts      ubi-echo
+builds-applications       html-helloworld       nodejs-helloworld     simple-pipeline  ubi-info
+builds-review             images-ubi            php-hello-dockerfile  solutions        ubi-sleep
+builds-triggers           java-serverhost       php-helloworld        todo-api
+container-build           kubefiles             php-scale             todo-api-micro
+deployments-applications  labs                  post-commit           todo-backend
+deployments-review        LICENSE               probes                todo-frontend
+[student@workstation DO288-apps]$ cat ubi-echo/Dockerfile 
+FROM registry.access.redhat.com/ubi8/ubi:8.0
+USER 1001
+CMD bash -c "while true; do echo test; sleep 5; done"
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ source /usr/local/etc/ocp4.config
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ cat source /usr/local/etc/ocp4.config
+cat: source: No such file or directory
+RHT_OCP4_MASTER_API=https://api.ocp4.example.com:6443/
+RHT_OCP4_WILDCARD_DOMAIN=apps.ocp4.example.com
+RHT_OCP4_NEXUS_SERVER=nexus-common.apps.ap410.prod.ole.redhat.com
+RHT_OCP4_MYSQL_SERVER=mysql.ocp-ap46a.prod.ole.redhat.com
+RHT_OCP4_DEV_USER=developer
+RHT_OCP4_DEV_PASSWORD=developer
+RHT_OCP4_GITHUB_USER=jeetu93
+RHT_OCP4_QUAY_USER=jk2023
+[student@workstation DO288-apps]$ oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+Login successful.
+
+You don't have any projects. You can try to create a new project, by running
+
+    oc new-project <projectname>
+
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc new-project ${RHT_OCP_DEV_USER}-docker-build
+error: unknown shorthand flag: 'd' in -docker-build
+See 'oc new-project --help' for usage.
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc new-project ${RHT_OCP_DEV_USER} --docker-build
+error: unknown flag: --docker-build
+See 'oc new-project --help' for usage.
+[student@workstation DO288-apps]$ oc new-project ${RHT_OCP_DEV_USER}--docker-build
+error: unknown flag: --docker-build
+See 'oc new-project --help' for usage.
+[student@workstation DO288-apps]$ oc new-project "${RHT_OCP_DEV_USER}-docker-build"
+error: unknown shorthand flag: 'd' in -docker-build
+See 'oc new-project --help' for usage.
+[student@workstation DO288-apps]$ oc new-project --help
+Create a new project for yourself.
+
+ If your administrator allows self-service, this command will create a new project for you and
+assign you as the project admin.
+
+ After your project is created it will become the default project in your config.
+
+Usage:
+  oc new-project NAME [--display-name=DISPLAYNAME] [--description=DESCRIPTION] [flags]
+
+Examples:
+  # Create a new project with minimal information
+  oc new-project web-team-dev
+  
+  # Create a new project with a display name and description
+  oc new-project web-team-dev --display-name="Web Team Development" --description="Development
+project for the web team."
+
+Options:
+      --description='': Project description
+      --display-name='': Project display name
+      --skip-config-write=false: If true, the project will not be set as a cluster entry in
+kubeconfig after being created
+
+Use "oc options" for a list of global command-line options (applies to all commands).
+[student@workstation DO288-apps]$ ^C
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc new-project ${RHT_OCP_DEV_USER}-docker-build
+error: unknown shorthand flag: 'd' in -docker-build
+See 'oc new-project --help' for usage.
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc new-project developer-docker-build
+Now using project "developer-docker-build" on server "https://api.ocp4.example.com:6443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app rails-postgresql-example
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=k8s.gcr.io/e2e-test-images/agnhost:2.33 -- /agnhost serve-hostname
+
+[student@workstation DO288-apps]$ oc get pod
+sNo resources found in developer-docker-build namespace.
+[student@workstation DO288-apps]$ oc get route
+No resources found in developer-docker-build namespace.
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc new-app --name echo https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps#docker-build --context-dir ubi-echo
+--> Found container image 11f9dba (3 years old) from registry.access.redhat.com for "registry.access.redhat.com/ubi8/ubi:8.0"
+
+    Red Hat Universal Base Image 8 
+    ------------------------------ 
+    The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.
+
+    Tags: base rhel8
+
+    * An image stream tag will be created as "ubi:8.0" that will track the source image
+    * A Docker build using source code from https://github.com/jeetu93/DO288-apps#docker-build will be created
+      * The resulting image will be pushed to image stream tag "echo:latest"
+      * Every time "ubi:8.0" changes a new build will be triggered
+
+--> Creating resources ...
+    imagestream.image.openshift.io "ubi" created
+    imagestream.image.openshift.io "echo" created
+    buildconfig.build.openshift.io "echo" created
+    deployment.apps "echo" created
+--> Success
+    Build scheduled, use 'oc logs -f buildconfig/echo' to track its progress.
+    Run 'oc status' to view your app.
+[student@workstation DO288-apps]$ oc status
+In project developer-docker-build on server https://api.ocp4.example.com:6443
+
+deployment/echo deploys istag/echo:latest <-
+  bc/echo docker builds https://github.com/jeetu93/DO288-apps#docker-build on istag/ubi:8.0 
+  deployment #2 running for 39 seconds - 1 pod
+  deployment #1 deployed about a minute ago
+
+
+1 info identified, use 'oc status --suggest' to see details.
+[student@workstation DO288-apps]$ oc get pods
+NAME                   READY   STATUS      RESTARTS   AGE
+echo-1-build           0/1     Completed   0          85s
+echo-c4cd976d5-q4rvh   1/1     Running     0          55s
+[student@workstation DO288-apps]$ oc get deployment
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+echo   1/1     1            1           94s
+[student@workstation DO288-apps]$ oc get replica
+error: the server doesn't have a resource type "replica"
+[student@workstation DO288-apps]$ oc get replicasets.apps
+NAME              DESIRED   CURRENT   READY   AGE
+echo-689b889488   0         0         0       112s
+echo-c4cd976d5    1         1         1       81s
+[student@workstation DO288-apps]$ oc logs -f bc/echo
+Adding cluster TLS certificate authority to trust store
+Cloning "https://github.com/jeetu93/DO288-apps" ...
+	Commit:	2be94f19f74226cc049ee02d200b392e25041464 (Merge pull request #359 from RedHatTraining/asernabo/ch02-412-apps-and-materials)
+	Author:	Alex Serna <asernabo@redhat.com>
+	Date:	Mon Sep 11 11:35:10 2023 +0200
+Adding cluster TLS certificate authority to trust store
+Replaced Dockerfile FROM image registry.access.redhat.com/ubi8/ubi:8.0
+Adding cluster TLS certificate authority to trust store
+time="2023-09-12T04:56:06Z" level=info msg="Not using native diff for overlay, this may cause degraded performance for building images: kernel has CONFIG_OVERLAY_FS_REDIRECT_DIR enabled"
+I0912 04:56:06.510055       1 defaults.go:102] Defaulting to storage driver "overlay" with options [mountopt=metacopy=on].
+Caching blobs under "/var/cache/blobs".
+
+Pulling image registry.access.redhat.com/ubi8/ubi@sha256:8275e2ad7f458e329bdc8c0e7543cff1729998fe515a281d49638246de8e39ee ...
+Trying to pull registry.access.redhat.com/ubi8/ubi@sha256:8275e2ad7f458e329bdc8c0e7543cff1729998fe515a281d49638246de8e39ee...
+Getting image source signatures
+Copying blob sha256:641d7cc5cbc48a13c68806cf25d5bcf76ea2157c3181e1db4f5d0edae34954ac
+Copying blob sha256:c65691897a4d140d441e2024ce086de996b1c4620832b90c973db81329577274
+Copying config sha256:11f9dba4d1bc7bbead64adb8fd73ea92dca5fac88a9b5c2c9796abcf2e97846d
+Writing manifest to image destination
+Storing signatures
+Adding transient rw bind mount for /run/secrets/rhsm
+STEP 1/5: FROM registry.access.redhat.com/ubi8/ubi@sha256:8275e2ad7f458e329bdc8c0e7543cff1729998fe515a281d49638246de8e39ee
+STEP 2/5: USER 1001
+--> 9729fa98cd7
+STEP 3/5: CMD bash -c "while true; do echo test; sleep 5; done"
+--> 86dabb1685d
+STEP 4/5: ENV "OPENSHIFT_BUILD_NAME"="echo-1" "OPENSHIFT_BUILD_NAMESPACE"="developer-docker-build" "OPENSHIFT_BUILD_SOURCE"="https://github.com/jeetu93/DO288-apps" "OPENSHIFT_BUILD_REFERENCE"="docker-build" "OPENSHIFT_BUILD_COMMIT"="2be94f19f74226cc049ee02d200b392e25041464"
+--> 2c078288671
+STEP 5/5: LABEL "io.openshift.build.commit.author"="Alex Serna <asernabo@redhat.com>" "io.openshift.build.commit.date"="Mon Sep 11 11:35:10 2023 +0200" "io.openshift.build.commit.id"="2be94f19f74226cc049ee02d200b392e25041464" "io.openshift.build.commit.message"="Merge pull request #359 from RedHatTraining/asernabo/ch02-412-apps-and-materials" "io.openshift.build.commit.ref"="docker-build" "io.openshift.build.name"="echo-1" "io.openshift.build.namespace"="developer-docker-build" "io.openshift.build.source-context-dir"="ubi-echo" "io.openshift.build.source-location"="https://github.com/jeetu93/DO288-apps"
+COMMIT temp.builder.openshift.io/developer-docker-build/echo-1:54e79407
+--> 924a5e37dd3
+Successfully tagged temp.builder.openshift.io/developer-docker-build/echo-1:54e79407
+924a5e37dd32ca0d15727a05dc1eb2b679254b79f96be4ac316712f08e3f0f6d
+
+Pushing image image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo:latest ...
+Getting image source signatures
+Copying blob sha256:641d7cc5cbc48a13c68806cf25d5bcf76ea2157c3181e1db4f5d0edae34954ac
+Copying blob sha256:c65691897a4d140d441e2024ce086de996b1c4620832b90c973db81329577274
+Copying config sha256:924a5e37dd32ca0d15727a05dc1eb2b679254b79f96be4ac316712f08e3f0f6d
+Writing manifest to image destination
+Storing signatures
+Successfully pushed image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo@sha256:a28c5998a945a6a6fa7baaae455d60190ff4f13cbf7d98bfa6a2d1d8c0807dad
+Push successful
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc status
+In project developer-docker-build on server https://api.ocp4.example.com:6443
+
+deployment/echo deploys istag/echo:latest <-
+  bc/echo docker builds https://github.com/jeetu93/DO288-apps#docker-build on istag/ubi:8.0 
+  deployment #2 running for 4 minutes - 1 pod
+  deployment #1 deployed 4 minutes ago
+
+
+1 info identified, use 'oc status --suggest' to see details.
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc get pods
+NAME                   READY   STATUS      RESTARTS   AGE
+echo-1-build           0/1     Completed   0          5m33s
+echo-c4cd976d5-q4rvh   1/1     Running     0          5m3s
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc logs echo-c4cd976d5-q4rvh | tail -3
+test
+test
+test
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc logs echo-c4cd976d5-q4rvh | tail -3
+test
+test
+test
+[student@workstation DO288-apps]$ oc get pods
+NAME                   READY   STATUS      RESTARTS   AGE
+echo-1-build           0/1     Completed   0          6m45s
+echo-c4cd976d5-q4rvh   1/1     Running     0          6m15s
+[student@workstation DO288-apps]$ oc describe b
+baremetalhosts.metal3.io                       buildconfigs.build.openshift.io
+bmceventsubscriptions.metal3.io                builds.build.openshift.io
+brokertemplateinstances.template.openshift.io  builds.config.openshift.io
+[student@workstation DO288-apps]$ oc get bc
+NAME   TYPE     FROM               LATEST
+echo   Docker   Git@docker-build   1
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc describe bc echo 
+Name:		echo
+Namespace:	developer-docker-build
+Created:	7 minutes ago
+Labels:		app=echo
+		app.kubernetes.io/component=echo
+		app.kubernetes.io/instance=echo
+Annotations:	openshift.io/generated-by=OpenShiftNewApp
+Latest Version:	1
+
+Strategy:	Docker
+URL:		https://github.com/jeetu93/DO288-apps
+Ref:		docker-build
+ContextDir:	ubi-echo
+From Image:	ImageStreamTag ubi:8.0
+Volumes:	<none>
+Output to:	ImageStreamTag echo:latest
+
+Build Run Policy:	Serial
+Triggered by:		Config, ImageChange
+Webhook GitHub:
+	URL:	https://api.ocp4.example.com:6443/apis/build.openshift.io/v1/namespaces/developer-docker-build/buildconfigs/echo/webhooks/<secret>/github
+Webhook Generic:
+	URL:		https://api.ocp4.example.com:6443/apis/build.openshift.io/v1/namespaces/developer-docker-build/buildconfigs/echo/webhooks/<secret>/generic
+	AllowEnv:	false
+Builds History Limit:
+	Successful:	5
+	Failed:		5
+
+Build	Status		Duration	Creation Time
+echo-1 	complete 	32s 		2023-09-12 00:55:45 -0400 EDT
+
+Events:
+  Type		Reason				Age			From			Message
+  ----		------				----			----			-------
+  Warning	BuildConfigInstantiateFailed	7m19s (x8 over 7m20s)	buildconfig-controller	error instantiating Build from BuildConfig developer-docker-build/echo (0): Error resolving ImageStreamTag ubi:8.0 in namespace developer-docker-build: unable to find latest tagged image
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ oc describe is echo
+Name:			echo
+Namespace:		developer-docker-build
+Created:		10 minutes ago
+Labels:			app=echo
+			app.kubernetes.io/component=echo
+			app.kubernetes.io/instance=echo
+Annotations:		openshift.io/generated-by=OpenShiftNewApp
+Image Repository:	default-route-openshift-image-registry.apps.ocp4.example.com/developer-docker-build/echo
+Image Lookup:		local=false
+Unique Images:		1
+Tags:			1
+
+latest
+  no spec tag
+
+  * image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo@sha256:a28c5998a945a6a6fa7baaae455d60190ff4f13cbf7d98bfa6a2d1d8c0807dad
+      9 minutes ago
+[student@workstation DO288-apps]$ docker get is
+bash: docker: command not found...
+[student@workstation DO288-apps]$ oc gt dc
+error: unknown command "gt" for "oc"
+
+Did you mean this?
+	cp
+	get
+	set
+[student@workstation DO288-apps]$ oc get dc
+No resources found in developer-docker-build namespace.
+[student@workstation DO288-apps]$ oc get deployment
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+echo   1/1     1            1           11m
+[student@workstation DO288-apps]$ oc describe deployment echo 
+Name:                   echo
+Namespace:              developer-docker-build
+CreationTimestamp:      Tue, 12 Sep 2023 00:55:44 -0400
+Labels:                 app=echo
+                        app.kubernetes.io/component=echo
+                        app.kubernetes.io/instance=echo
+Annotations:            deployment.kubernetes.io/revision: 2
+                        image.openshift.io/triggers:
+                          [{"from":{"kind":"ImageStreamTag","name":"echo:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"echo\")].image"}]
+                        openshift.io/generated-by: OpenShiftNewApp
+Selector:               deployment=echo
+Replicas:               1 desired | 1 updated | 1 total | 1 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:       deployment=echo
+  Annotations:  openshift.io/generated-by: OpenShiftNewApp
+  Containers:
+   echo:
+    Image:        image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo@sha256:a28c5998a945a6a6fa7baaae455d60190ff4f13cbf7d98bfa6a2d1d8c0807dad
+    Port:         <none>
+    Host Port:    <none>
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   echo-c4cd976d5 (1/1 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  12m   deployment-controller  Scaled up replica set echo-689b889488 to 1
+  Normal  ScalingReplicaSet  11m   deployment-controller  Scaled up replica set echo-c4cd976d5 to 1
+  Normal  ScalingReplicaSet  11m   deployment-controller  Scaled down replica set echo-689b889488 to 0
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ pwd
+/home/student/DO288-apps
+[student@workstation DO288-apps]$ ls
+app-config                deployments-strategy  micro-java            quip             todo-single
+apps                      go-hello              movies                quotes           todo-ssr
+books                     hello-java            multicontainer-helm   README.md        trigger-builds
+build-app                 hello-world-nginx     nexus3                s2i-scripts      ubi-echo
+builds-applications       html-helloworld       nodejs-helloworld     simple-pipeline  ubi-info
+builds-review             images-ubi            php-hello-dockerfile  solutions        ubi-sleep
+builds-triggers           java-serverhost       php-helloworld        todo-api
+container-build           kubefiles             php-scale             todo-api-micro
+deployments-applications  labs                  post-commit           todo-backend
+deployments-review        LICENSE               probes                todo-frontend
+[student@workstation DO288-apps]$ gedit ubi-echo/Dockerfile 
+[student@workstation DO288-apps]$ 
+[student@workstation DO288-apps]$ cd ubi-echo/
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ git diff Dockerfile
+diff --git a/ubi-echo/Dockerfile b/ubi-echo/Dockerfile
+index 176078e..0b28fb3 100644
+--- a/ubi-echo/Dockerfile
++++ b/ubi-echo/Dockerfile
+@@ -1,3 +1,3 @@
+ FROM registry.access.redhat.com/ubi8/ubi:8.0
+ USER 1001
+-CMD bash -c "while true; do echo test; sleep 5; done"
++CMD bash -c "while true; do (( i++ )); echo test \$i; sleep 5; done"
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ git commit -a -m 'Add a counter'
+[main 863ac4e] Add a counter
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+[student@workstation ubi-echo]$ git push
+Username for 'https://github.com': k.jitendra345@yahoo.com
+Password for 'https://k.jitendra345@yahoo.com@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 430 bytes | 430.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/jeetu93/DO288-apps.git
+   2be94f1..863ac4e  main -> main
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc start-build echo
+build.build.openshift.io/echo-2 started
+[student@workstation ubi-echo]$ oc logs -f bc/echo
+Adding cluster TLS certificate authority to trust store
+Cloning "https://github.com/jeetu93/DO288-apps" ...
+	Commit:	2be94f19f74226cc049ee02d200b392e25041464 (Merge pull request #359 from RedHatTraining/asernabo/ch02-412-apps-and-materials)
+	Author:	Alex Serna <asernabo@redhat.com>
+	Date:	Mon Sep 11 11:35:10 2023 +0200
+Adding cluster TLS certificate authority to trust store
+Replaced Dockerfile FROM image registry.access.redhat.com/ubi8/ubi:8.0
+Adding cluster TLS certificate authority to trust store
+time="2023-09-12T05:12:21Z" level=info msg="Not using native diff for overlay, this may cause degraded performance for building images: kernel has CONFIG_OVERLAY_FS_REDIRECT_DIR enabled"
+I0912 05:12:21.293037       1 defaults.go:102] Defaulting to storage driver "overlay" with options [mountopt=metacopy=on].
+Caching blobs under "/var/cache/blobs".
+
+Pulling image registry.access.redhat.com/ubi8/ubi@sha256:8275e2ad7f458e329bdc8c0e7543cff1729998fe515a281d49638246de8e39ee ...
+Trying to pull registry.access.redhat.com/ubi8/ubi@sha256:8275e2ad7f458e329bdc8c0e7543cff1729998fe515a281d49638246de8e39ee...
+Getting image source signatures
+Copying blob sha256:c65691897a4d140d441e2024ce086de996b1c4620832b90c973db81329577274
+Copying blob sha256:641d7cc5cbc48a13c68806cf25d5bcf76ea2157c3181e1db4f5d0edae34954ac
+Copying config sha256:11f9dba4d1bc7bbead64adb8fd73ea92dca5fac88a9b5c2c9796abcf2e97846d
+Writing manifest to image destination
+Storing signatures
+Adding transient rw bind mount for /run/secrets/rhsm
+STEP 1/5: FROM registry.access.redhat.com/ubi8/ubi@sha256:8275e2ad7f458e329bdc8c0e7543cff1729998fe515a281d49638246de8e39ee
+STEP 2/5: USER 1001
+--> 7f798f4ef5a
+STEP 3/5: CMD bash -c "while true; do echo test; sleep 5; done"
+--> 63975587db6
+STEP 4/5: ENV "OPENSHIFT_BUILD_NAME"="echo-2" "OPENSHIFT_BUILD_NAMESPACE"="developer-docker-build" "OPENSHIFT_BUILD_SOURCE"="https://github.com/jeetu93/DO288-apps" "OPENSHIFT_BUILD_REFERENCE"="docker-build" "OPENSHIFT_BUILD_COMMIT"="2be94f19f74226cc049ee02d200b392e25041464"
+--> 4fb8033c931
+STEP 5/5: LABEL "io.openshift.build.commit.author"="Alex Serna <asernabo@redhat.com>" "io.openshift.build.commit.date"="Mon Sep 11 11:35:10 2023 +0200" "io.openshift.build.commit.id"="2be94f19f74226cc049ee02d200b392e25041464" "io.openshift.build.commit.message"="Merge pull request #359 from RedHatTraining/asernabo/ch02-412-apps-and-materials" "io.openshift.build.commit.ref"="docker-build" "io.openshift.build.name"="echo-2" "io.openshift.build.namespace"="developer-docker-build" "io.openshift.build.source-context-dir"="ubi-echo" "io.openshift.build.source-location"="https://github.com/jeetu93/DO288-apps"
+COMMIT temp.builder.openshift.io/developer-docker-build/echo-2:583ed404
+--> 5287449958b
+Successfully tagged temp.builder.openshift.io/developer-docker-build/echo-2:583ed404
+5287449958be73b7757ca694e29817a11bfa68a80a824333b9101e7569624530
+
+Pushing image image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo:latest ...
+Getting image source signatures
+Copying blob sha256:641d7cc5cbc48a13c68806cf25d5bcf76ea2157c3181e1db4f5d0edae34954ac
+Copying blob sha256:c65691897a4d140d441e2024ce086de996b1c4620832b90c973db81329577274
+Copying config sha256:5287449958be73b7757ca694e29817a11bfa68a80a824333b9101e7569624530
+Writing manifest to image destination
+Storing signatures
+Successfully pushed image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo@sha256:3b1f3d5e46a8bc3b886a74b145e83f846a2bd1459ff6f304cd897a70b6ad8b4e
+Push successful
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc status
+In project developer-docker-build on server https://api.ocp4.example.com:6443
+
+deployment/echo deploys istag/echo:latest <-
+  bc/echo docker builds https://github.com/jeetu93/DO288-apps#docker-build on istag/ubi:8.0 
+  deployment #3 running for 50 seconds - 1 pod
+  deployment #2 deployed 17 minutes ago
+  deployment #1 deployed 17 minutes ago
+
+
+1 info identified, use 'oc status --suggest' to see details.
+[student@workstation ubi-echo]$ oc get deployment
+NAME   READY   UP-TO-DATE   AVAILABLE   AGE
+echo   1/1     1            1           17m
+[student@workstation ubi-echo]$ oc get bc
+NAME   TYPE     FROM               LATEST
+echo   Docker   Git@docker-build   2
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc get pod
+NAME                    READY   STATUS      RESTARTS   AGE
+echo-1-build            0/1     Completed   0          18m
+echo-2-build            0/1     Completed   0          119s
+echo-7f99b79fbd-ssf94   1/1     Running     0          98s
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc logs echo-pl1hg | head -n 3
+Error from server (NotFound): pods "echo-pl1hg" not found
+[student@workstation ubi-echo]$ oc logs echo-7f99b79fbd-ssf94 | head -n 3
+test
+test
+test
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ gedit Dockerfile 
+[student@workstation ubi-echo]$ oc describe is echo
+Name:			echo
+Namespace:		developer-docker-build
+Created:		19 minutes ago
+Labels:			app=echo
+			app.kubernetes.io/component=echo
+			app.kubernetes.io/instance=echo
+Annotations:		openshift.io/generated-by=OpenShiftNewApp
+Image Repository:	default-route-openshift-image-registry.apps.ocp4.example.com/developer-docker-build/echo
+Image Lookup:		local=false
+Unique Images:		2
+Tags:			1
+
+latest
+  no spec tag
+
+  * image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo@sha256:3b1f3d5e46a8bc3b886a74b145e83f846a2bd1459ff6f304cd897a70b6ad8b4e
+      2 minutes ago
+    image-registry.openshift-image-registry.svc:5000/developer-docker-build/echo@sha256:a28c5998a945a6a6fa7baaae455d60190ff4f13cbf7d98bfa6a2d1d8c0807dad
+      19 minutes ago
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc delete all -l app=echo
+deployment.apps "echo" deleted
+buildconfig.build.openshift.io "echo" deleted
+imagestream.image.openshift.io "echo" deleted
+imagestream.image.openshift.io "ubi" deleted
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc get all
+NAME                        READY   STATUS        RESTARTS   AGE
+pod/echo-7f99b79fbd-ssf94   1/1     Terminating   0          3m44s
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc get all
+NAME                        READY   STATUS        RESTARTS   AGE
+pod/echo-7f99b79fbd-ssf94   1/1     Terminating   0          3m49s
+[student@workstation ubi-echo]$ oc get all
+No resources found in developer-docker-build namespace.
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ history
+    1  exit
+    2  lab cat /usr/lhistory
+    3  history
+    4  cat /usr/share/bash-completion/completions/lab 
+    5  cat ~/.bashrc 
+    6  helm version
+    7  vi ~/.bashrc
+    8  ssh lab@utility
+    9  exit
+   10  lab --refresh
+   11  exit
+   12  exit
+   13  exit
+   14  exit
+   15  lab-configure
+   16  cd $HOME
+   17  pwd
+   18  touch tocken
+   19  gedit tocken 
+   20  ls
+   21  ll
+   22  cp tocken token
+   23  rm tocken 
+   24  cat token 
+   25  lab-configure
+   26  ls
+   27  git clone https://github.com/jeetu93/DO288-apps.git
+   28  ls
+   29  ls -ltrh
+   30  cd DO288-apps/
+   31  git status
+   32  head README.md
+   33  ls
+   34  ls -ltrh
+   35  pwd
+   36  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd
+   37  oc new-app --help
+   38  oc login https://api.ocp4.example.com:6443
+   39  cd ~
+   40  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd
+   41  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd --kubeconfig
+   42  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd
+   43  oc login https://api.ocp4.example.com:6443
+   44  oc whoami -t
+   45  oc whoami
+   46  cd /usr/local/etc/
+   47  ls
+   48  gedit ocp4.config 
+   49  printenv
+   50  printenv | grep KUBE
+   51  gedit ocp4.config 
+   52  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd
+   53  oc new-app --docker-image=registry.access.redhat.com/rhel7-mysql57 
+   54  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd -as-deployment-config
+   55  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd -as-deployment-config --allow-missing-images
+   56  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd#main
+   57  oc view kubeconfig
+   58  cd $HOME
+   59  ls
+   60  cd ~/.kube/config
+   61  ls -ltrh
+   62  cat lab-configure 
+   63  oc new-app https://github.com/RedHatTraining/DO288-apps/apps/deploy-cli/weather-app
+   64  oc login --user developer api.openshift.example.com:6443
+   65  oc login --username developer api.openshift.example.com:6443
+   66  history
+   67  cat /usr/local/etc/ocp4.config 
+   68  oc login --username developer api.ocp4.example.com:6443
+   69  cd $HOME
+   70  pwd
+   71  ls
+   72  cd ..
+   73  ls
+   74  cd student/
+   75  ls
+   76  ls -ltrh
+   77  cd /home/devops/
+   78  ls
+   79  cd ~
+   80  ls
+   81  pwd
+   82  cat .kube/config 
+   83  pwd
+   84  oc login --username student api.ocp4.example.com:6443
+   85  oc login --username developer api.ocp4.example.com:6443
+   86  export KUBECONFIG=/home/student/.kube/config
+   87  touch .bash_profile
+   88  gedit .bash
+   89  gedit .bash_profile 
+   90  cat .bash_history 
+   91  cat .bash_profile 
+   92  oc new-app https://github.com/RedHatTraining/DO288/tree/main/apps/apache-httpd
+   93  oc new-app https://github.com/RedHatTraining/DO288-apps/tree/main/apps/apache-httpd
+   94  oc new-app https://github.com/RedHatTraining/DO288-apps/#main
+   95  oc new-app main:https://github.com/RedHatTraining/DO288-apps/#main
+   96  oc new-app https://github.com/RedHatTraining/DO288-apps/#main
+   97  lab docker-build start
+   98  pwd
+   99  ls
+  100  cd DO288
+  101  ll
+  102  git status
+  103  cd ..
+  104  ls
+  105  pwd
+  106  cd DO288-apps/
+  107  ls
+  108  git status
+  109  git checkout main
+  110  git checkout -b docker-build
+  111  git status
+  112  git push -u origin docker-build
+  113  lab docker-build start
+  114  pwd
+  115  ls
+  116  cd DO288-apps/
+  117  git status
+  118  git config --global user.email
+  119  git config --global user.email "k.jitendra345@yahoo.com"
+  120  git config --global user.email
+  121  git checkout main
+  122  git config --global user.name
+  123  git checkout -b docker-build
+  124  git branch
+  125  git push -u origin docker-build
+  126  clear
+  127  ls -ltrh
+  128  ls
+  129  cat ubi-echo/Dockerfile 
+  130  source /usr/local/etc/ocp4.config
+  131  cat source /usr/local/etc/ocp4.config
+  132  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  133  oc new-project ${RHT_OCP_DEV_USER}-docker-build
+  134  oc new-project ${RHT_OCP_DEV_USER} --docker-build
+  135  oc new-project ${RHT_OCP_DEV_USER}--docker-build
+  136  oc new-project "${RHT_OCP_DEV_USER}-docker-build"
+  137  oc new-project --help
+  138  oc new-project ${RHT_OCP_DEV_USER}-docker-build
+  139  oc new-project developer-docker-build
+  140  oc get pod
+  141  oc get route
+  142  oc new-app --name echo https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps#docker-build --context-dir ubi-echo
+  143  oc status
+  144  oc get pods
+  145  oc get deployment
+  146  oc get replica
+  147  oc get replicasets.apps
+  148  oc logs -f bc/echo
+  149  oc status
+  150  oc get pods
+  151  oc logs echo-c4cd976d5-q4rvh | tail -3
+  152  oc get pods
+  153  oc get bc
+  154  oc describe bc echo 
+  155  oc describe is echo
+  156  docker get is
+  157  oc gt dc
+  158  oc get dc
+  159  oc get deployment
+  160  oc describe deployment echo 
+  161  pwd
+  162  ls
+  163  gedit ubi-echo/Dockerfile 
+  164  cd ubi-echo/
+  165  git diff Dockerfile
+  166  git commit -a -m 'Add a counter'
+  167  git push
+  168  oc start-build echo
+  169  oc logs -f bc/echo
+  170  oc status
+  171  oc get deployment
+  172  oc get bc
+  173  oc get pod
+  174  oc logs echo-pl1hg | head -n 3
+  175  oc logs echo-7f99b79fbd-ssf94 | head -n 3
+  176  gedit Dockerfile 
+  177  oc describe is echo
+  178  oc delete all -l app=echo
+  179  oc get all
+  180  history
+[student@workstation ubi-echo]$ 
