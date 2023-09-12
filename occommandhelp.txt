@@ -1,0 +1,258 @@
+Red Hat OpenShift Administration I: Managing Containers and Kubernetes
+Red Hat OpenShift Administration I: Managing Containers and Kubernetes (DO180) v4.12  180  history
+[student@workstation ubi-echo]$ gedit cx.txt
+[student@workstation ubi-echo]$ lab docker-build finish
+
+Completing GE: Deploying an Application to an OpenShift Cluster
+
+ · Log in on OpenShift.........................................  SUCCESS
+ · Remove exercise files.......................................  SUCCESS
+ · Remove solution files.......................................  SUCCESS
+ · Delete OpenShift project 'developer-docker-build'...........  SUCCESS
+ · Wait for project 'developer-docker-build' to be gone........  SUCCESS
+ · Git repo '/home/student/DO288-apps' has no pending changes..  FAIL
+
+You need to either stash or commit your local changes before moving to the next exercise.
+See the Appendix "Managing Git Branches" if you need help to perform these actions
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ clear
+
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ lab deploy-image start
+
+Checking prerequisites for GE: Managing an Application with the Web Console
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · No cluster operators are progressing........................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ Checking required artifacts:
+ · Image 'redhattraining/php-hello-dockerfile' is available....  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc login -u developer -p developer \
+> 
+  hLogin successful.
+
+tYou don't have any projects. You can try to create a new project, by running
+
+    oc new-project <projectname>
+
+[student@workstation ubi-echo]$ oc login -u developer -p developer  https://api.ocp4.example.com:6443
+Login successful.
+
+You don't have any projects. You can try to create a new project, by running
+
+    oc new-project <projectname>
+
+[student@workstation ubi-echo]$ oc whoami 
+developer
+[student@workstation ubi-echo]$ oc whoami --show-console
+https://console-openshift-console.apps.ocp4.example.com
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ lab deploy-image finish
+
+Completing GE: Managing an Application with the Web Console
+
+ · Log in on OpenShift.........................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ lab deploy-image start
+
+Checking prerequisites for GE: Managing an Application with the Web Console
+
+ Verify the OpenShift cluster is running:
+ · Router pods are available...................................  SUCCESS
+
+ · OAuth pods are available....................................  SUCCESS
+ · API pods are available......................................  SUCCESS
+ · No cluster operators are progressing........................  SUCCESS
+ · Control plane node 'master01' is ready......................  SUCCESS
+ Checking required artifacts:
+ · Image 'redhattraining/php-hello-dockerfile' is available....  SUCCESS
+
+Overall start status...........................................  SUCCESS
+
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ lab deploy-image finish
+
+Completing GE: Managing an Application with the Web Console
+
+ · Log in on OpenShift.........................................  SUCCESS
+
+Please use start if you wish to do the exercise again.
+
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc --version
+error: unknown flag: --version
+See 'oc --help' for usage.
+[student@workstation ubi-echo]$ oc --help
+OpenShift Client
+
+This client helps you develop, build, deploy, and run your applications on any
+OpenShift or Kubernetes cluster. It also includes the administrative
+commands for managing a cluster under the 'adm' subcommand.
+
+Usage:
+  oc [flags]
+
+Basic Commands:
+  login           Log in to a server
+  new-project     Request a new project
+  new-app         Create a new application
+  status          Show an overview of the current project
+  project         Switch to another project
+  projects        Display existing projects
+  explain         Get documentation for a resource
+
+Build and Deploy Commands:
+  rollout         Manage a Kubernetes deployment or OpenShift deployment config
+  rollback        Revert part of an application back to a previous deployment
+  new-build       Create a new build configuration
+  start-build     Start a new build
+  cancel-build    Cancel running, pending, or new builds
+  import-image    Import images from a container image registry
+  tag             Tag existing images into image streams
+
+Application Management Commands:
+  create          Create a resource from a file or from stdin
+  apply           Apply a configuration to a resource by file name or stdin
+  get             Display one or many resources
+  describe        Show details of a specific resource or group of resources
+  edit            Edit a resource on the server
+  set             Commands that help set specific features on objects
+  label           Update the labels on a resource
+  annotate        Update the annotations on a resource
+  expose          Expose a replicated application as a service or route
+  delete          Delete resources by file names, stdin, resources and names, or
+by resources and label selector
+  scale           Set a new size for a deployment, replica set, or replication
+controller
+  autoscale       Autoscale a deployment config, deployment, replica set,
+stateful set, or replication controller
+  secrets         Manage secrets
+  serviceaccounts Manage service accounts in your project
+
+Troubleshooting and Debugging Commands:
+  logs            Print the logs for a container in a pod
+  rsh             Start a shell session in a container
+  rsync           Copy files between a local file system and a pod
+  port-forward    Forward one or more local ports to a pod
+  debug           Launch a new instance of a pod for debugging
+  exec            Execute a command in a container
+  proxy           Run a proxy to the Kubernetes API server
+  attach          Attach to a running container
+  run             Run a particular image on the cluster
+  cp              Copy files and directories to and from containers
+  wait            Experimental: Wait for a specific condition on one or many
+resources
+
+Advanced Commands:
+  adm             Tools for managing a cluster
+  replace         Replace a resource by file name or stdin
+  patch           Update fields of a resource
+  process         Process a template into list of resources
+  extract         Extract secrets or config maps to disk
+  observe         Observe changes to resources and react to them (experimental)
+  policy          Manage authorization policy
+  auth            Inspect authorization
+  image           Useful commands for managing images
+  registry        Commands for working with the registry
+  idle            Idle scalable resources
+  api-versions    Print the supported API versions on the server, in the form of
+"group/version"
+  api-resources   Print the supported API resources on the server
+  cluster-info    Display cluster information
+  diff            Diff the live version against a would-be applied version
+  kustomize       Build a kustomization target from a directory or URL.
+
+Settings Commands:
+  logout          End the current server session
+  config          Modify kubeconfig files
+  whoami          Return information about the current session
+  completion      Output shell completion code for the specified shell (bash,
+zsh or fish)
+
+Other Commands:
+  help            Help about any command
+  plugin          Provides utilities for interacting with plugins
+  version         Print the client and server version information
+
+Use "oc <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all
+commands).
+[student@workstation ubi-echo]$ oc version
+Client Version: 4.10.14
+Kubernetes Version: v1.23.5+b463d71
+[student@workstation ubi-echo]$ oc whoami
+developer
+[student@workstation ubi-echo]$ oc whoami --help
+Show information about the current session
+
+ The default options for this command will return the currently authenticated
+user name or an empty string.  Other flags support returning the currently used
+token or the user context.
+
+Usage:
+  oc whoami [flags]
+
+Examples:
+  # Display the currently authenticated user
+  oc whoami
+
+Options:
+      --show-console=false: If true, print the current server's web console URL
+  -c, --show-context=false: Print the current user context name
+      --show-server=false: If true, print the current server's REST API URL
+  -t, --show-token=false: Print the token the current session is using. This
+will return an error if you are using a different form of authentication.
+
+Use "oc options" for a list of global command-line options (applies to all
+commands).
+[student@workstation ubi-echo]$ oc whoami --show-console 
+https://console-openshift-console.apps.ocp4.example.com
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc whoami --show-context 
+/api-ocp4-example-com:6443/developer
+[student@workstation ubi-echo]$ 
+[student@workstation ubi-echo]$ oc get
+You must specify the type of resource to get. Use "oc api-resources" for a complete list of supported resources.
+
+error: Required resource not specified.
+Use "oc explain <resource>" for a detailed description of that resource (e.g. oc explain pods).
+See 'oc get -h' for help and examples
+[student@workstation ubi-echo]$ oc get all
+Error from server (Forbidden): pods is forbidden: User "developer" cannot list resource "pods" in API group "" in the namespace "default"
+Error from server (Forbidden): replicationcontrollers is forbidden: User "developer" cannot list resource "replicationcontrollers" in API group "" in the namespace "default"
+Error from server (Forbidden): services is forbidden: User "developer" cannot list resource "services" in API group "" in the namespace "default"
+Error from server (Forbidden): daemonsets.apps is forbidden: User "developer" cannot list resource "daemonsets" in API group "apps" in the namespace "default"
+Error from server (Forbidden): deployments.apps is forbidden: User "developer" cannot list resource "deployments" in API group "apps" in the namespace "default"
+Error from server (Forbidden): replicasets.apps is forbidden: User "developer" cannot list resource "replicasets" in API group "apps" in the namespace "default"
+Error from server (Forbidden): statefulsets.apps is forbidden: User "developer" cannot list resource "statefulsets" in API group "apps" in the namespace "default"
+Error from server (Forbidden): horizontalpodautoscalers.autoscaling is forbidden: User "developer" cannot list resource "horizontalpodautoscalers" in API group "autoscaling" in the namespace "default"
+Error from server (Forbidden): cronjobs.batch is forbidden: User "developer" cannot list resource "cronjobs" in API group "batch" in the namespace "default"
+Error from server (Forbidden): jobs.batch is forbidden: User "developer" cannot list resource "jobs" in API group "batch" in the namespace "default"
+Error from server (Forbidden): deploymentconfigs.apps.openshift.io is forbidden: User "developer" cannot list resource "deploymentconfigs" in API group "apps.openshift.io" in the namespace "default"
+Error from server (Forbidden): buildconfigs.build.openshift.io is forbidden: User "developer" cannot list resource "buildconfigs" in API group "build.openshift.io" in the namespace "default"
+Error from server (Forbidden): builds.build.openshift.io is forbidden: User "developer" cannot list resource "builds" in API group "build.openshift.io" in the namespace "default"
+Error from server (Forbidden): imagestreams.image.openshift.io is forbidden: User "developer" cannot list resource "imagestreams" in API group "image.openshift.io" in the namespace "default"
+Error from server (Forbidden): routes.route.openshift.io is forbidden: User "developer" cannot list resource "routes" in API group "route.openshift.io" in the namespace "default"
+[student@workstation ubi-echo]$ oc get status
+error: the server doesn't have a resource type "status"
+[student@workstation ubi-echo]$ gedit 
+ners and Kubernetes (DO180) v4.12
